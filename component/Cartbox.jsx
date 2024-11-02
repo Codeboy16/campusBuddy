@@ -4,7 +4,7 @@ import "../global.css";
 
 const Cartbox = ({ color, icon, name }) => {
   return (
-    <TouchableOpacity activeOpacity={0.5} className={`h-56 w-52 rounded-2xl bg-${color? color : "#ef5350"}-400 m-1`}>
+    <TouchableOpacity activeOpacity={0.5} className={`h-56 w-48 rounded-2xl bg-${color? color : "#ef5350"}-400 m-1`} style={{backgroundColor:color}}>
       <View className="flex-1 justify-center justify-items-center">
         {/* <FontAwesome name="home" size={84} color="white" className='text-center'/> */}
         {icon}

@@ -9,8 +9,8 @@ import {
   ActivityIndicator,
 } from "react-native";
 import react from "react";
+import { Link, router } from "expo-router";
 import "../../global.css";
-import Feather from "@expo/vector-icons/Feather";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import React, { useState, useEffect } from "react";
@@ -19,12 +19,12 @@ import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
 import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import Shopbox from "../../component/Shopbox";
+import MoreItem from '../screens/MoreItem';
 
 export default function HomeScreen() {
   const [msg, setMsg] = useState(true);
   return (
     <View className="mx-3 mt-5 pt-5">
-      <StatusBar backgroundColor="white" barStyle="dark-content" />
       <ScrollView>
         {/* Header Section */}
         <View
@@ -49,7 +49,7 @@ export default function HomeScreen() {
             placeholder="Search here...."
             placeholderTextColor="black"
             autoComplete="off"
-            maxLength={30}
+            maxLength={25}
           />
           {msg ? (
             <Ionicons
@@ -69,7 +69,7 @@ export default function HomeScreen() {
         </View>
         {/* Body Section */}
         <View className="my-4 mx-4">
-          <Text className="text-3xl font-medium">Hi' Rohit Singh 👋</Text>
+          <Text className="text-3xl font-medium">Hi' Borrow Buddy 👋</Text>
           <Text className="text-2xl font-medium py-2">
             Why Buy New When One Can Share😊
           </Text>
@@ -82,11 +82,13 @@ export default function HomeScreen() {
           />
         </View>
         {/* Caterogry Section */}
-        <View className="my-5 mx-2">
+        <View className="my-5 mx-1">
           <View className="flex-1 flex-row justify-between ">
             <Text className="text-3xl font-medium">Categories</Text>
-            <Text className="text-2xl font-medium underline text-amber-600">
-              See All →
+            <Text className="text-2xl font-medium underline text-amber-600" onPress={() => {
+                  router.push('../screens/Categories');
+                }}>
+              SeeAll →
             </Text>
           </View>
           {/* CartBox */}
@@ -105,7 +107,7 @@ export default function HomeScreen() {
                 name="Home"
               />
               <CartBox
-                color="yellow"
+                color="purple"
                 icon={
                   <FontAwesome6
                     name="shirt"
@@ -129,7 +131,7 @@ export default function HomeScreen() {
                 name="Notes"
               />
               <CartBox
-                color="purple"
+                color="green"
                 icon={
                   <FontAwesome5
                     name="donate"
@@ -140,36 +142,30 @@ export default function HomeScreen() {
                 }
                 name="Donate"
               />
-              <CartBox
-                color="yellow"
-                icon={
-                  <FontAwesome5
-                    name="utensils"
-                    size={84}
-                    color="white"
-                    className="text-center"
-                  />
-                }
-                name="Utensils"
-              />
             </View>
           </ScrollView>
           {/* Recommended */}
           <View>
             <View className="flex-1 flex-row justify-between py-2">
-            <Text className="text-3xl font-medium">Suggested😄</Text>
-            <Text className="text-2xl font-medium underline text-amber-600">
-              More →
-            </Text>
-          </View>
+              <Text className="text-3xl font-medium">Suggested😄</Text>
+              <Text
+                className="text-2xl font-medium underline text-amber-600"
+                onPress={() => {
+                  router.push('../screens/MoreItem');
+                }}
+              >
+                MoreItem →
+                
+              </Text>
+            </View>
             {/* Import Shop Box */}
             <View>
               <ScrollView
                 horizontal={true}
-                showsHorizontalScrollIndicator={false}>
-                <Shopbox/>
-                <Shopbox/>
-                <ActivityIndicator size={100} />
+                showsHorizontalScrollIndicator={false}
+              >
+                <Shopbox />
+                <Shopbox />
               </ScrollView>
             </View>
           </View>

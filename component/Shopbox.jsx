@@ -68,7 +68,7 @@ const Shopbox = () => {
           borderTopColor: "#E5E7EB",
         }}
       >
-        <Text style={{ fontSize: 20, fontWeight: "600" }}>₹100/-</Text>
+        <Text style={{ fontSize: 20, fontWeight: "600" }}>₹2999/-</Text>
         <TouchableOpacity activeOpacity={0.5}>
           <Text
             style={{
