@@ -5,8 +5,8 @@ import { StatusBar } from 'react-native';
 export default function RootLayout() {
   return (
     <>
-      <StatusBar backgroundColor="white" barStyle="dark-content" />
-      <Stack>
+      <StatusBar backgroundColor="black" barStyle="white" />
+      <Stack initialRouteName='Login'>
         <Stack.Screen name="Login" options={{ headerShown: false }} />
         <Stack.Screen name="Signup" options={{ headerShown: false }} />
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />

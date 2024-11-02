@@ -55,9 +55,9 @@ export default function TabLayout() {
       <Tabs.Screen
         name="Camera"
         options={{
-          title: "",
+          title: "<-____->",
           tabBarIcon: ({ color }) => (
-            <AntDesign name="pluscircleo" size={46} color={color} />
+            <AntDesign name="pluscircleo" size={40} color={color} />
           ),
         }}
       />
