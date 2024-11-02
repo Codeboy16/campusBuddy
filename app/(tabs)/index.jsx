@@ -19,7 +19,7 @@ import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
 import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import Shopbox from "../../component/Shopbox";
-import MoreItem from '../screens/MoreItem';
+import MoreItem from "../screens/MoreItem";
 
 export default function HomeScreen() {
   const [msg, setMsg] = useState(true);
@@ -85,10 +85,13 @@ export default function HomeScreen() {
         <View className="my-5 mx-1">
           <View className="flex-1 flex-row justify-between ">
             <Text className="text-3xl font-medium">Categories</Text>
-            <Text className="text-2xl font-medium underline text-amber-600" onPress={() => {
-                  router.push('../screens/Categories');
-                }}>
-              SeeAll →
+            <Text
+              className="text-2xl font-medium underline text-amber-600"
+              onPress={() => {
+                router.push("../screens/Categories");
+              }}
+            >
+              SeeAll→
             </Text>
           </View>
           {/* CartBox */}
@@ -151,14 +154,13 @@ export default function HomeScreen() {
               <Text
                 className="text-2xl font-medium underline text-amber-600"
                 onPress={() => {
-                  router.push('../screens/MoreItem');
+                  router.push("../screens/MoreItem");
                 }}
               >
-                MoreItem →
-                
+                MoreItem→
               </Text>
             </View>
-            {/* Import Shop Box */}
+            {/* Import Shop Box --Suggested Box*/}
             <View>
               <ScrollView
                 horizontal={true}

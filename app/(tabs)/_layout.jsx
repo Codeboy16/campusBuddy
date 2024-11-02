@@ -1,7 +1,6 @@
 import { Tabs } from "expo-router";
-import { StyleSheet, View, Keyboard } from 'react-native';
+import { Keyboard} from 'react-native';
 import React, { useEffect, useState } from "react";
-import Entypo from "@expo/vector-icons/Entypo";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import Feather from "@expo/vector-icons/Feather";
 import Ionicons from '@expo/vector-icons/Ionicons';
@@ -66,7 +65,7 @@ export default function TabLayout() {
         options={{
           title: "Carts",
           tabBarIcon: ({ color }) => (
-            <AntDesign name="shoppingcart" size={35} color={color} />
+                      <AntDesign name="shoppingcart" size={35} color={color} />
           ),
         }}
       />
