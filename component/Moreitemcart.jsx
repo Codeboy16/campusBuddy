@@ -86,7 +86,7 @@ const Moreitem = ({title,image,description,price}) => {
               onPress={()=>{setAdd(!add)}}
             >
               {
-                add? 'Buyed' : 'Buy'  
+                add? 'Added' : 'Add'  
                }
             </Text>
           </TouchableOpacity>

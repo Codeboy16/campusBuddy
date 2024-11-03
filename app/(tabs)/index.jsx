@@ -20,6 +20,7 @@ import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import Shopbox from "../../component/Shopbox";
 import MoreItem from "../screens/MoreItem";
+import Animated,{ FlipInXDown, FlipInXUp} from 'react-native-reanimated';
 
 export default function HomeScreen() {
   const [msg, setMsg] = useState(true);
@@ -97,36 +98,41 @@ export default function HomeScreen() {
           {/* CartBox */}
           <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
             <View className="my-4 flex-1 flex-row justify-around flex-wrap ">
+              <Animated.View entering={FlipInXDown.delay(10).duration(1000)}>
               <CartBox
                 color="red"
                 icon={
                   <FontAwesome5
                     name="home"
-                    size={84}
+                    size={74}
                     color="white"
                     className="text-center"
                   />
                 }
                 name="Home"
               />
+              </Animated.View>
+              {/* second */}
+              <Animated.View entering={FlipInXUp.delay(10).duration(1000)}>
               <CartBox
                 color="purple"
                 icon={
                   <FontAwesome6
                     name="shirt"
-                    size={84}
+                    size={74}
                     color="white"
                     className="text-center"
                   />
                 }
                 name="Cloths"
               />
+              </Animated.View>
               <CartBox
                 color="blue"
                 icon={
                   <AntDesign
                     name="copy1"
-                    size={84}
+                    size={74}
                     color="white"
                     className="text-center"
                   />
@@ -138,7 +144,7 @@ export default function HomeScreen() {
                 icon={
                   <FontAwesome5
                     name="donate"
-                    size={84}
+                    size={74}
                     color="white"
                     className="text-center"
                   />
